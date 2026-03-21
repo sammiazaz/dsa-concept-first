@@ -17,7 +17,7 @@ public class PQ {
         for (int i = 1; i < arr2.length; i++) {
             if (arr2[i] > max) {
                 max = arr2[i];
-            }
+            } 
         }
         System.out.println("Max = " + max);
 
