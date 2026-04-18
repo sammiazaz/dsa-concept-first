@@ -1,41 +1,54 @@
-#!/bin/bash
+# DSA Concept First 🧠
 
-mkdir -p "day01-arrays"
-mkdir -p "day02-crud-on-arrays"
-mkdir -p "day03-array-questions"
-mkdir -p "day04-linked-list"
-mkdir -p "day05-crud-on-linked-list"
-mkdir -p "day06-linked-list-questions"
-mkdir -p "day07-stack"
-mkdir -p "day08-crud-on-stack"
-mkdir -p "day09-stack-questions"
-mkdir -p "day10-queue"
-mkdir -p "day11-crud-on-queue"
-mkdir -p "day12-queue-questions"
-mkdir -p "day13-trees-bst"
-mkdir -p "day14-crud-on-bst"
-mkdir -p "day15-tree-questions"
-mkdir -p "day16-hashmap"
-mkdir -p "day17-crud-on-hashmap"
-mkdir -p "day18-hashmap-questions"
+A day-by-day journey through Data Structures & Algorithms.  
+One topic per cycle — learn it, implement it, practice it.
 
-echo "# Day 01 - Arrays" > "day01-arrays/README.md"
-echo "# Day 02 - CRUD on Arrays" > "day02-crud-on-arrays/README.md"
-echo "# Day 03 - Array Questions" > "day03-array-questions/README.md"
-echo "# Day 04 - Linked List" > "day04-linked-list/README.md"
-echo "# Day 05 - CRUD on Linked List" > "day05-crud-on-linked-list/README.md"
-echo "# Day 06 - Linked List Questions" > "day06-linked-list-questions/README.md"
-echo "# Day 07 - Stack" > "day07-stack/README.md"
-echo "# Day 08 - CRUD on Stack" > "day08-crud-on-stack/README.md"
-echo "# Day 09 - Stack Questions" > "day09-stack-questions/README.md"
-echo "# Day 10 - Queue" > "day10-queue/README.md"
-echo "# Day 11 - CRUD on Queue" > "day11-crud-on-queue/README.md"
-echo "# Day 12 - Queue Questions" > "day12-queue-questions/README.md"
-echo "# Day 13 - Trees and BST" > "day13-trees-bst/README.md"
-echo "# Day 14 - CRUD on BST" > "day14-crud-on-bst/README.md"
-echo "# Day 15 - Tree Questions" > "day15-tree-questions/README.md"
-echo "# Day 16 - HashMap" > "day16-hashmap/README.md"
-echo "# Day 17 - CRUD on HashMap" > "day17-crud-on-hashmap/README.md"
-echo "# Day 18 - HashMap Questions" > "day18-hashmap-questions/README.md"
+## Daily Structure
 
-echo "All folders and README files created successfully!"
+Every topic follows a 3-day cycle:
+
+| Day | Focus |
+|-----|-------|
+| Day N | Concept — theory and key ideas |
+| Day N+1 | CRUD — implement core operations from scratch |
+| Day N+2 | Questions — solve problems using that structure |
+
+## Topics Roadmap
+
+| Days | Topic |
+|------|-------|
+| 01 – 03 | Arrays |
+| 04 – 06 | Linked List |
+| 07 – 09 | Stack |
+| 10 – 12 | Queue |
+| 13 – 15 | Trees & BST |
+| 16 – 18 | HashMap |
+| 19 – 21 | Graph |
+
+## Progress
+
+- [ ] Day 01 — Arrays
+- [ ] Day 02 — CRUD on Arrays
+- [ ] Day 03 — Array Questions
+- [ ] Day 04 — Linked List
+- [ ] Day 05 — CRUD on Linked List
+- [ ] Day 06 — Linked List Questions
+- [ ] Day 07 — Stack
+- [ ] Day 08 — CRUD on Stack
+- [ ] Day 09 — Stack Questions
+- [ ] Day 10 — Queue
+- [ ] Day 11 — CRUD on Queue
+- [ ] Day 12 — Queue Questions
+- [ ] Day 13 — Trees & BST
+- [ ] Day 14 — CRUD on BST
+- [ ] Day 15 — Tree Questions
+- [ ] Day 16 — HashMap
+- [ ] Day 17 — CRUD on HashMap
+- [ ] Day 18 — HashMap Questions
+- [ ] Day 19 — Graph
+- [ ] Day 20 — CRUD on Graph
+- [ ] Day 21 — Graph Questions
+
+---
+
+*Consistency > Intensity. One day at a time.*
