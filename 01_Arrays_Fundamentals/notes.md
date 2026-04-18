@@ -1,428 +1,451 @@
-<!-- # 📘 Day 01 - Arrays Notes
+# Arrays — Complete Notes
 
-## 📌 Definition
 
-An **array** is an indexed collection of a fixed number of **homogeneous (same type)** elements. 
 
-👉 Key idea:
+## 5. Arrays
 
-* One name → multiple values
-* Stored in **continuous memory**
+### 5.1 Introduction
 
----
+An **array** is an indexed collection of a **fixed number** of **homogeneous** (same type) data elements.
 
-## 🧠 Why Arrays?
+```
+Array of int with 5 elements:
 
-* Improves **readability**
-* Easy **access using index**
-* Efficient for storing large data
-
----
-
-## ⚠️ Limitation
-
-* Fixed size ❌
-* Cannot grow/shrink dynamically 
-
----
-
-## 🧩 Types of Arrays
-
-### 1️⃣ One-Dimensional Array (1D)
-
-![Image](https://images.openai.com/static-rsc-4/N5TOyhg9PQvqxMmMo-Oar-Q5uSQ32B06PwagiTrll6czBQJtxqvxSGgrLmZ22bohUdcodIUbxeNXeptBrRUoBvBrCGT8aGYOzcQ4hakwI5kksMPxw7K32LP87HZg-DdUQ8Jx-r1fzPtIXN2C2iN9T8-HiUDzivhz-vQbYFNyALZeWHl9BjUm60uBNal2ApZq?purpose=fullsize)
-
-![Image](https://images.openai.com/static-rsc-4/I7yPwQgl0i5CzPbx4EBPWe6NXuJs831k3evCn4EGcwRj3DZltkbvATqJQVFXKryGlfaW6AXBAPBI5qQthQ7R-LzSJ_XhGeoxRhOE71-HGogd2OnFwPd6gg7313N5tm_nib_aocjWw9VKTA72OoAnQi0OaI9bS1gX_yZdm3wyBHicL0Pe282VtTH03jKoYaYv?purpose=fullsize)
-
-![Image](https://images.openai.com/static-rsc-4/gyeDDVvIWHTLlo7G4DHApalUQN81sAbpgw7p5wyWcjLY7Vefj4fh_Z8qHi0Ka6DBPjMH7Tj1z4a2a4JcBlvp8RIoRAMzcSEFkMge8Z1aEdYXhxq5TBW6pdzLzsm3N1Zt9DfqDDeMBeUBuqSqd0NQq7si-4FfnEafNf-7sElKEmU4Kt2Km_Aw5vw-FZ3qxfTA?purpose=fullsize)
-
-![Image](https://images.openai.com/static-rsc-4/1a3UjF4myl3EbwHTlSTDbk2aNnBrv5diCxKjgYZGr7gZx2jqEnGIAjHG2vjZxIPiKLWIVfu1v8xOd-kmcVJ1u43xVDDrBOSmLR8YoTUqDbvecFPFeUvgSJ5_Nr8R4f4LGgb7TWpAfatL4pp_GarzerztIQbF_rUpEJB0ECbyqqF4RLrtvGz352Ts0LKdEUNC?purpose=fullsize)
-
-![Image](https://images.openai.com/static-rsc-4/3zTDkj_5mAHBVt0Iuo-wQs_d9rOCDeZ3So-i8Qflvu7nKGkcLohnzzQKl9g9cm5ogncNqY9w_X4aF_2UE4EE0kPCw-rdOwnvTc9kNuLWKYlEdCYyLFh7y7EOtuzFw2zltC57K4upkRlFolWXHaRjgjuipC2xIAtLWwD5yqP7mWXrTsImA00tFvRHa8qWAgXg?purpose=fullsize)
-
-![Image](https://images.openai.com/static-rsc-4/WSPqq79vrKMClQXYq4N4LUOAsvZFFyCdB7x6Q623Petpw1ixeusmjbgxIY-iNV1yN3VyvFrXuyszhV8njQsWssTI3xQsov99grWgGwM1UqzzioX6HKNheerBgv-9tW8S3kaPBfdIh2O_eyXvEmkZGDABf_Dver5nnN3qI9kFZaaDxlYZVeJ9StMzMdRmwVUV?purpose=fullsize)
-
-![Image](https://images.openai.com/static-rsc-4/kCzki-LjFbWA8oM62wm7f-qkaAJF9sbLwoJUEQK0LF4d60bKCk2shrqzIyLQGsiqC9gD7jKsqJN9wMsvDb4CJ-Org6u7ncHhfYKatoKAINL1bVjfiCTYnzknKDAa_fSIN7506PcRfR-KWFBJFEZoWGaTj0fEYmfs5sjBrwBF99ZLeEJSajuuL3jG6sRwakaF?purpose=fullsize)
-
-```java
-int[] arr = new int[5];
+Index:  [0]  [1]  [2]  [3]  [4]
+Value:  10   20   30   40   50
+         ↑
+     a[0] = 10
 ```
 
-* Single index
-* Linear structure
+**Advantage:** Represent multiple values using a single variable name → better readability.
+
+**Disadvantage:** Fixed in size. Once created, cannot grow or shrink.  
+→ Solution: Use **Collections** (ArrayList, etc.) for dynamic sizing.
 
 ---
 
-### 2️⃣ Two-Dimensional Array (2D)
+### 5.2 Array Declaration
 
-![Image](https://images.openai.com/static-rsc-4/SJls9474I1q49sON6mzrGp_fXmYrokns3tswR1xFlF9spR3UZGsTbDkSOGBdRfY9REB3xGo2FGDrlOudLTYlCqoFUTtzMu_EhmBgbsXTr3hxGheiTKESedu9rv3n2hQjaGeHDwKEh7lF2sQ82kkZplnHs7MHiQNISvBBFo0FfIZUcXiScxBXjSaJ3vJBl0Qc?purpose=fullsize)
-
-![Image](https://images.openai.com/static-rsc-4/CzLKfq0lYAskVkWr3lweGhFOyvva3pCcKlC1zSVMZm9NvUsIj9CfR7B3sKOBT_sEn3TZKEHQLZCyMx_B0bxvI82_01V9Vbb-hgdFFB6uZXjd0JzRjafQRg4rrDGuAN-YyvB6OxbR202R8auMdb9Z4x9PJKuulQERVzhneTAyh1zMWFtUSyEHlSRx_Jlq54Xz?purpose=fullsize)
-
-![Image](https://images.openai.com/static-rsc-4/_t__y7okNCCijjcG0rxDek9kWIoGz3mC6Cwist1-kZWdYDc2zanACS91xwCnbi5Yg9TSEbczgCTcIfZiYfw6wbgSc89N7I9J-zkOt6vSqLi_Qt74mfeSVxgwI0tuAZihjo6xQNkN-XKL8IS8FR2T2oe_DW5MeyXfnG_DokW4uvPx7KVFifXG9UTXQbzmhVoj?purpose=fullsize)
-
-![Image](https://images.openai.com/static-rsc-4/aORYkuAqojrE2BRlUCeLphojIgqi3kyGPgFlDoEiduqeFxMXcaeAurBtnCnMvHS-SyftK2qzS5nkNL-MhHs9_2qPxCDYa3ln3bW2uZnTSiUjc5Pc9t0vJziAsbrx1xfmBrmEz7-jnfBao02L5WdY5ltHKr_X51HSfpliqqLoE7xG51KBapheiNPfYPkLy-UP?purpose=fullsize)
-
-![Image](https://images.openai.com/static-rsc-4/eKmOx5NjM-ldKCS0GpBFyv1ZXkut_M-_aH6vjkoPHID5glGtMmCRV5RcWb8NOr1vA7uHWc1FlGpidOG-p72tovKnDDhPWh-8disWq_4brUcCo8r8fe95zfpEmNm_BiOCR3BlUfkyIpVcNtH2XxzpXSlRZCFX5Q1EgBLtMwyNhNuCk7Jz2Q9953miP9tyE8Hr?purpose=fullsize)
-
-![Image](https://images.openai.com/static-rsc-4/I11R53IKlMq64HfLewNShU1b8I6tAblRlzYau-WECuotJ0Buu_1_x8Bu-78BAebmdQZlbscAH11vwV2NgnilJB7-VFUgN20YKX8cWQD5dgWMG271WhfDWOssiQWIPvF42IlB6rVuulUicNBRuv1MExMyt6tsfv5LoBc8hPVhPyNDAsbO7T99BzPm9H8xEZfA?purpose=fullsize)
-
-![Image](https://images.openai.com/static-rsc-4/3Gqklx4TnaBQJd4ZXDM6NnrOWBr8fHDtVG6xUR8NSAo4Agu3XHl9sJl2X_OpMBjskwjaidbYwpNvUbyjmjeQku-g-X5S_8Sl4954Yl2NvP2OjhsmEgaIXgLDqpGoJBT6kAlT93eIYt3uo7qeWmoCSyT7sSgq_0s88UFCk955rkcdCNOFq1ZKqFCsWpQeyK4V?purpose=fullsize)
-
+**Single Dimensional:**
 ```java
-int[][] arr = new int[2][3];
+int[] a;      // Recommended ✅ — type and name clearly separated
+int []a;      // Valid
+int a[];      // Valid
+
+// INVALID — cannot specify size at declaration time:
+int[5] a;     // INVALID
 ```
 
-* Rows and columns
-* Table/matrix-like
+**Two Dimensional (6 valid ways):**
+```java
+int[][] a;
+int [][]a;
+int a[][];
+int[] []a;
+int[] a[];
+int []a[];
+```
+
+**Three Dimensional (10 valid ways):**
+```java
+int[][][] a;
+int [][][]a;
+int a[][][];
+int[] [][]a;
+int[] a[][];
+int[] []a[];
+int[][] []a;
+int[][] a[];
+int []a[][];
+int [][]a[];
+```
+
+**Tricky Multi-variable Declarations:**
+```java
+int[] a1, b1;     // a1=1D, b1=1D        → VALID
+int[] a2[], b2;   // a2=2D, b2=1D        → VALID
+int[] []a3, b3;   // a3=2D, b3=2D        → VALID
+int[] a, []b;     // INVALID — [] before b is not allowed for 2nd variable
+```
+
+> **Rule:** If dimension is specified before variable name, it applies to the 1st variable only. Second variable onwards cannot have `[]` before its name.
 
 ---
 
-### 3️⃣ Multi-Dimensional Array
+### 5.3 Array Construction
 
-```java
-int[][][] arr = new int[2][3][4];
-```
-
-* More than 2 dimensions
-
----
-
-### 4️⃣ Jagged Array (Important)
-
-![Image](https://images.openai.com/static-rsc-4/eOv6PbjqckVZ2rOsTf5OQ3J9OxO-vs6y5QC9n0PSMWXsWx4sCMxbQGEb1ePX6nEW4Z1X3poXUOGN0LdCdozeKJfEx8GZ0nT31mdiMR-XVoVQR7VAzYYbGqUXdqmZep_B1GM1QGQEYu4rWt7pGQTkBwQDSf7lh07kQcgvQalLV5xZw8zHdaEuJXrI5fWUxfkA?purpose=fullsize)
-
-![Image](https://images.openai.com/static-rsc-4/DkFXY6dBwwfUFK9cRsHbHW3oI4Ywoi5JkORigtkTzp9Tqoefu-f2QTZ2LL3EPC4JtFjGdrMSuD9VrPc-_2Lt6hOj0SlVArfNehbDbpXQFzNHW75NqbfWCW5OWiEdFg0S1bWP3Z-aO93KDXqxcougvH0zNEkmlfE_QK3Tg2NIu6C96hXnlwEfV3OB23Xceukx?purpose=fullsize)
-
-![Image](https://images.openai.com/static-rsc-4/Bbk7_LKRK-GrlmFP4PrihdCxKK3D8iOHf8M3CbN9SWHxLn6xmeJ-J69YykPilnTmc8fEOg0pv5axR9u3L8d_QgWqhMbnPyfZUH7Iy_kPcCSO2A8q3s1pupCWPkdl2_VQSq1f0nnsYpHU1D9joKkEX8vgPmxl8iQ5ldAJ133ueRmeLOWeZRKpeThDKXhobWp9?purpose=fullsize)
-
-![Image](https://images.openai.com/static-rsc-4/dh2S-fu4CZo5WNjKycEaQjr26mRDU-lmU7T2V-24Qfv5wQTICNNztEbzlXokmHKStZQ-_Q8vtstWuc1APNRPcBOdiiJwMp4zEeRtx6o5SmsOdZ-vEfa3TnCy7_VwqpXMUnLJ8taUFYe2gycNM3ElhnPdHQ6op4qGLP1_co97lFIL1ZuP3XqgFWGbfEDZT0kO?purpose=fullsize)
-
-![Image](https://images.openai.com/static-rsc-4/p043ZsyeiFRniKaJy7pfNmne-BNN2r-ABUulzF1blA77I5sCRDNh_CcWDrOmGEpEP-JyOGeiWbvEU2oH8ZCFfxS_aR4bFnjv6T-PGU7wsYlTmxpuvQXxtHzP9ikDzo_4gZZzH8x2UOJr0yJM82vV9T0yBfHvERiao-Ii8JOx54C2WwTMiPQcxoxmteDF9nlK?purpose=fullsize)
-
-![Image](https://images.openai.com/static-rsc-4/00CtTpNqgaJJ1P35zysfZotyqm3_0F-IB9_IGxFjZpGPAQznTdhmqOSj4tuCqmJMl6pJarteEhxt8GXiMgKsjH33jihkJB_1Arcw6skgQCeiBSzZSvZ-ribgzf0vIO5KAUeNlCM4hGzakGY_wqK0O6c6k0jVEVZJBMSE6y01eh52BChlbZlzqZtIMIxNe5DJ?purpose=fullsize)
-
-![Image](https://images.openai.com/static-rsc-4/700W6-_iafTWRox4cKga_c6oTESsi5WnklBxZk5leZpNO0ohkd31CzRnC274xfVAWiN66wM3A4aBsrJ3pJgUfWmWUB0xpVeaM8fYgTEcTDgOur7sXb693pnb8A-skysZB_yPL5zk-hV8gYPiKzbd9RqOAD-eEzL41hqwY6sp7kfCxcYVHp9ESn1ruRhOffdy?purpose=fullsize)
-
-![Image](https://images.openai.com/static-rsc-4/Z12d6GUpUB4WUfjOVvb8Q9zxzWZLrmHWxcJhEJCLgy6p4CBWBpVBZWCYsAn-KlhnVLgcGVXE3zMFOIGk6SJvTtptrXZgO_DCCtCHo6V1whVINWuImFEW6DEWbvuhz6pIFkIGziaG32my-UB8xBVtOUxxD9KcFkCzeX4fsgZYjLCYX7-tXcxhZ4Wti3zX3oVJ?purpose=fullsize)
-
-```java
-int[][] arr = new int[2][];
-arr[0] = new int[3];
-arr[1] = new int[2];
-```
-
-👉 Java uses **array of arrays**, not strict matrix 
-
----
-
-## 🏗️ Array Declaration
-
-```java
-int[] a;      // recommended
-int a[];
-```
-
-❌ Invalid:
-
-```java
-int[5] a; // size not allowed during declaration
-```
-
----
-
-## ⚙️ Array Creation
+Every array in Java is an **object**, created using the `new` keyword.
 
 ```java
 int[] a = new int[3];
+
+Memory Layout:
+a ──→  ┌─────┬─────┬─────┐
+       │  0  │  0  │  0  │   (default values = 0)
+       └─────┴─────┴─────┘
+        [0]   [1]   [2]
 ```
 
-👉 Important rules:
+**Rules:**
 
-* Size must be given
-* Size ≥ 0
-* Negative size → Runtime Error
+**Rule 1:** Size must be specified at creation time.
+```java
+int[] a = new int[3];    // VALID
+int[] a = new int[];     // INVALID — array dimension missing
+```
 
----
+**Rule 2:** Size zero is legal.
+```java
+int[] a = new int[0];
+System.out.println(a.length);   // 0
+```
 
-## 🧪 Default Values
+**Rule 3:** Negative size → `NegativeArraySizeException` at runtime.
+```java
+int[] a = new int[-3];   // RE: NegativeArraySizeException
+```
 
-When array is created:
+**Rule 4:** Allowed size types: `byte`, `short`, `char`, `int`.
+```java
+int[] a = new int['a'];    // VALID ('a' = 97)
+byte b = 10;
+int[] a = new int[b];      // VALID
+short s = 20;
+int[] a = new int[s];      // VALID
+int[] a = new int[10l];    // INVALID — long not allowed
+int[] a = new int[10.5];   // INVALID — float not allowed
+```
 
-| Type         | Default Value |
-| ------------ | ------------- |
-| int          | 0             |
-| float/double | 0.0           |
-| boolean      | false         |
-| object       | null          |
+**Rule 5:** Maximum size = Integer.MAX_VALUE = 2,147,483,647
+```java
+int[] a1 = new int[2147483647];    // VALID (but may get OutOfMemoryError)
+int[] a2 = new int[2147483648];    // INVALID — too large (compile error)
+```
 
-![Image](https://images.openai.com/static-rsc-4/OZdiTrVzmwJ6MukjLP6kVTnKlPGW9j4b77SvbRGPeSGqJW_SwP686sZ_RCaa_Qf6BI2cQBcaM0zcMfM3hQXSOSbqQYJvdY-j8S2dHMLH7-SBnZWSxRR6UuPcFe3Px-70oAGi4rwcdAg7R94o2mWV0x1xkG-x0u4Rc5QcxzgQ037wCTd0oE-nB8ci4q5W3R8q?purpose=fullsize)
-
-![Image](https://images.openai.com/static-rsc-4/uqjGhmy57rEnFTuEJUvdpbkRVomQwj6qgEzkAQe_5LzXxkAnXAQ_3NnFNLZFteNA_7lhghrsFLvwBysEonc2MQ2drzTw-16ZH6s7P6qkxjj27NNWbAlO4_hhnqPn-EyRggmFTR4aozTGqcWFcqTIzj62D5_rnswIJKok3VQ0tWPjQ3j2zlvyDrDhs-CR2h8R?purpose=fullsize)
-
-![Image](https://images.openai.com/static-rsc-4/hKSvruMuk29rOkWRVgyViD38CFv8ZHIRfow795nRkffz9gEzsyXu6tBTLkTZyeafxr2UxNWGD2bO1DG4RtEEO5Yh5yBjNYSLpfDCFgMld3zjJBnBGZ_oDU_y0CMIraJc5tCd02qLrw8VmyO8p9m3TGYAJQ69mTm7F6RDQ5N3Y33pwGz2dwMc7fk5L3JZd78-?purpose=fullsize)
-
-![Image](https://images.openai.com/static-rsc-4/C5amOYkWnELwN_7otVMoI7h3p7DRFns76U0hFmfSyNSCXpQzYA7w0CB0i3MvFTSlsSLSjGp5hsHANDZqlUY7-sZfhhM7VlqE7oRssXSTaZxDTmNSPbJQbUJzI3ReoEzzlNk7FEMBICyAscxPP00It0zWEraIsSu0fY8IZ0BETzDAa3cTVrY8hwm0vAF4gD37?purpose=fullsize)
-
-![Image](https://images.openai.com/static-rsc-4/CnXIFQnL874M7Z6VGILd_57N_-m1j4cR6s0daHa6Jqi_ntoSs_KGtwZ6fiBhcfn3UqEMyk2TOMsLOSCNaKfzxtc0B4Pu20mvtzxz_lNpFDhFgRGGKkF2NzZC77FaIxvvyYc9dCjYS0ek2ivQqfsUob_ahHVJQn5Ro-aBdjdrzkVraeog3MzQ2_lzfPJQZpdN?purpose=fullsize)
-
-![Image](https://images.openai.com/static-rsc-4/74Pe0TvO-3F5G-qxG6DH3rCYQkz0wD0g7Zd1zQYqjljTp9dSj2Qm7HPg8nRRi8lSJb_3x6ASrhELoDPmj195fu19g69UIljwZ85zhOHts-H0Px9xIeTIiPKxR3WepvSCBqcnyJm43XV_matN4DbNce0S3cqNG6QQfvL9tvrk14PPpBPVHbkbeVqAjSX1_oT7?purpose=fullsize)
-
----
-
-## 🧱 Memory Representation
-
-![Image](https://images.openai.com/static-rsc-4/I7yPwQgl0i5CzPbx4EBPWe6NXuJs831k3evCn4EGcwRj3DZltkbvATqJQVFXKryGlfaW6AXBAPBI5qQthQ7R-LzSJ_XhGeoxRhOE71-HGogd2OnFwPd6gg7313N5tm_nib_aocjWw9VKTA72OoAnQi0OaI9bS1gX_yZdm3wyBHicL0Pe282VtTH03jKoYaYv?purpose=fullsize)
-
-![Image](https://images.openai.com/static-rsc-4/FQ1hWWGgZsSlPKVZNdz8gqbAdNpZLvPnt2YtTI0NR7BnU9LD_dVRh60khnNZsPW75Fujubop47mW54Ib_Ji7kj41i7a8lxAiDXQa79qe3yB0eg64w2RvsoDlWfP1ityx1lGLDTZsH5cuR40_PnumltK_4sMUvVReC8kM49VX55Zd1azwqe8uVsW_ZN1pVFBV?purpose=fullsize)
-
-![Image](https://images.openai.com/static-rsc-4/QqC2ZqY1DwB6DncIeicbPjk-VSYcO-SztuB_XCMD9OlQyaEnJEiZzXAVZiIiq5gOa4N_jcacI9r9CKRvz6wY6HX8oXN65v9an5uhu3j2wq4th0sWn187CnM7oCdWCOgPjy9li-5Qmj-Pcp1_e4WenJPcFLt-HsSnf9BNYQuq8Lho34nHNwRZGtn8hzAA6bTn?purpose=fullsize)
-
-![Image](https://images.openai.com/static-rsc-4/GMGV727XFVxGXIEWml-8dSpkGeSKL6-vS5hP7v4SztGD18iD3AU0IyCW4yGzSCWMBPI48jeRyKGWWsPEWi9Gne6zq6cnZFEI37eGEnIH00gkLU-pg7n2VF4PIrOjM1Bu35xWnXufCuICUsfXXOXqAzKW768jEYQrVQyoWpmc30vG7HN9GWJhsj5sRGG-b3US?purpose=fullsize)
-
-![Image](https://images.openai.com/static-rsc-4/jIEyRsxVtQiajL0glGaoYCEYtrFgeJZHx15uf9okixmSXZhqQTtRhpetSXOd_rZ-dZ-IvXKLoA4M9r8gnya4GCPQvRB8Sa62rKMNhIxeyXEo8H71RnU418n_9nsAb6l8wc593udYMRhXJqymb4ANuNlfKCGDvIPNOmGwkI_VY_S-MqXFlSkKm0OiXiUTdK5H?purpose=fullsize)
-
-![Image](https://images.openai.com/static-rsc-4/XD_mRX15wdTQCROXFw3qvKUom-H3NSHqBA2XM3ClP8oi2LiFY1xTd0a2iB6pbV4R1i6yeOplfk8R12pTjdbqFCyg2cHPc8YeSFnAaWpAceTcx1W_-klOGq5-CEWxvxKJrHknDLuaC2lfUylCT2wZsptSiOOqRxONgvT4LwMHp6kbuo12Qe9oUsugh9R-vcWP?purpose=fullsize)
-
-* Stored in **heap memory**
-* Variable stores **reference (address)**
-* Elements are contiguous
+**Array Type → Internal Class Name:**
+| Array Type | Class Name |
+|------------|-----------|
+| `int[]` | `[I` |
+| `int[][]` | `[[I` |
+| `double[]` | `[D` |
 
 ---
 
-## 📏 Index Rules
+### 5.4 Multi-Dimensional Array Creation
 
-* Starts from **0**
-* Ends at **n-1**
+Java implements multidimensional arrays as **array of arrays** (NOT matrix form).  
+Benefit: Saves memory — each row can have a different size (jagged arrays).
 
-❌ Invalid access:
+**Example 1 — 2D Jagged Array:**
+```java
+int[][] a = new int[2][];   // 2 rows, column size not yet decided
+a[0] = new int[3];          // row 0 has 3 columns
+a[1] = new int[2];          // row 1 has 2 columns
+
+Memory:
+a ──→ [ ref0 | ref1 ]
+         │       └──→ [ 0 | 0 ]
+         └──────────→ [ 0 | 0 | 0 ]
+```
+
+**Example 2 — 3D Array:**
+```java
+int[][][] a = new int[2][][];
+a[0] = new int[3][];
+a[0][0] = new int[1];
+a[0][1] = new int[2];
+a[0][2] = new int[3];
+a[1] = new int[2][2];
+```
+
+**Valid/Invalid Constructions:**
+```java
+int[][] a = new int[3][4];      // VALID
+int[][] a = new int[3][];       // VALID (jagged)
+int[][] a = new int[][4];       // INVALID — must specify first dimension
+int[][][] a = new int[3][4][5]; // VALID
+int[][][] a = new int[3][4][];  // VALID
+int[][][] a = new int[3][][5];  // INVALID — must specify from left to right
+```
+
+---
+
+### 5.5 Array Initialization
+
+When an array is created, all elements are automatically initialized to **default values**.
+
+| Type | Default Value |
+|------|--------------|
+| `int`, `byte`, `short`, `long` | 0 |
+| `float`, `double` | 0.0 |
+| `boolean` | false |
+| `char` | `\u0000` (blank space) |
+| Object references | null |
 
 ```java
-arr[5]; // ArrayIndexOutOfBoundsException
+int[] a = new int[3];
+System.out.println(a);       // [I@3e25a5  (hash of array object)
+System.out.println(a[0]);    // 0
 ```
+
+> **Note:** Printing an array reference calls `toString()` which returns `classname@hashcode`.  
+> For `int[]`, class is `[I`, so output looks like `[I@3e25a5`.
+
+**Replacing default values:**
+```java
+int[] a = new int[4];
+a[0] = 10;
+a[1] = 20;
+a[2] = 30;
+a[3] = 40;
+a[4] = 50;   // RE: ArrayIndexOutOfBoundsException: 4
+a[-4] = 60;  // RE: ArrayIndexOutOfBoundsException: -4
+```
+
+> If you access any index outside [0, length-1], you get `ArrayIndexOutOfBoundsException`.
 
 ---
 
-## 🧮 Important Formula
-
-```
-Address of arr[i] = base + (i × size)
-```
-
-👉 Reason:
-
-* Direct access → **O(1)**
-
----
-
-## 🔁 Initialization Methods
-
-### 1. Separate
+### 5.6 Declaration + Construction + Initialization in One Line
 
 ```java
-int[] arr = new int[3];
-arr[0] = 10;
+// Long way:
+int[] a;
+a = new int[3];
+a[0] = 10;
+a[1] = 20;
+a[2] = 30;
+
+// Short way (all in one line):
+int[] a = {10, 20, 30};   // ✅ Recommended
 ```
 
-### 2. Single Line
+**Other examples:**
+```java
+char[] ch = {'a', 'e', 'i', 'o', 'u'};
+String[] s = {"Alice", "Bob", "Charlie"};
+```
+
+**Multi-dimensional shortcut:**
+```java
+int[][] a = {{10, 20, 30}, {40, 50}};
+
+Memory:
+a ──→ [ ref0 | ref1 ]
+         │       └──→ [ 40 | 50 ]
+         └──────────→ [ 10 | 20 | 30 ]
+```
+
+**3D example:**
+```java
+int[][][] a = {{{10,20,30},{40,50}}, {{60},{70,80},{90,100,110}}};
+
+// Access:
+System.out.println(a[0][1][1]);   // 50 ✅
+System.out.println(a[1][0][2]);   // RE: ArrayIndexOutOfBoundsException ❌
+System.out.println(a[1][2][1]);   // 100 ✅
+System.out.println(a[1][2][2]);   // 110 ✅
+System.out.println(a[1][1][1]);   // 80 ✅
+```
+
+> **Important:** Shortcut (inline initialization) only works if declaration, construction, and initialization are all done on the **same line**.
+```java
+int[] x = {10, 20, 30};   // VALID ✅
+
+// This FAILS:
+int[] x;
+x = new int[3];
+x = {10, 20, 30};         // CE: illegal start of expression ❌
+```
+
+---
+
+### 5.7 length vs length()
+
+| | `length` | `length()` |
+|--|----------|------------|
+| Type | Variable (final) | Method |
+| Applies to | Arrays | String objects |
+| Usage | `a.length` | `s.length()` |
 
 ```java
-int[] arr = {10, 20, 30};
+int[] x = new int[3];
+System.out.println(x.length);    // 3 ✅
+System.out.println(x.length());  // CE: cannot find symbol ❌
+
+String s = "Hello";
+System.out.println(s.length());  // 5 ✅
+System.out.println(s.length);    // CE: cannot find symbol ❌
+```
+
+**For multidimensional arrays**, `length` gives only the **base (outermost) size**:
+```java
+int[][] a = new int[6][3];
+System.out.println(a.length);      // 6 (number of rows)
+System.out.println(a[0].length);   // 3 (columns in row 0)
+
+// Total size (manual calculation):
+// a[0].length + a[1].length + ... + a[n].length
 ```
 
 ---
 
-## 🔥 Key Rules (Must Remember)
+### 5.8 Anonymous Arrays
 
-* Array is **object in Java** 
-* Fixed size
-* Homogeneous elements
-* Contiguous memory
-* Fast access (O(1))
+Arrays created **without a name**, used only for immediate one-time use.
 
----
+```java
+new int[]{10, 20, 30, 40}         // 1D anonymous array
+new int[][]{{10,20},{30,40}}      // 2D anonymous array
 
-## 🧠 Summary
+// INVALID — cannot specify size in anonymous arrays:
+new int[3]{10, 20, 30};           // INVALID
+```
 
-* Arrays store multiple values with same name
-* Best for **fast access**
-* Not good for frequent insert/delete
-* Foundation for all advanced DSA
+**Practical use — passing directly to a method:**
+```java
+class Test {
+    public static void main(String[] args) {
+        System.out.println(sum(new int[]{10, 20, 30, 40}));   // 100
+    }
 
----
+    public static int sum(int[] x) {
+        int total = 0;
+        for (int x1 : x) {
+            total = total + x1;
+        }
+        return total;
+    }
+}
+```
 
-## ✅ What You Should Do
+> The array is created just to call `sum()`. After the call, it's no longer needed → perfect for anonymous arrays.
 
-* Write array declaration in all forms
-* Create 1D, 2D, jagged arrays
-* Print and dry run memory
-
---- -->
-
-#!/bin/bash
-
-# DSA Learning Repo - Folder Scaffold Script
-# Run this from the root of your cloned GitHub repo
-# Usage: bash setup_dsa_repo.sh
-
-set -e
-
-declare -A DAYS=(
-  ["day01"]="arrays"
-  ["day02"]="crud-on-arrays"
-  ["day03"]="array-questions"
-  ["day04"]="linked-list"
-  ["day05"]="crud-on-linked-list"
-  ["day06"]="linked-list-questions"
-  ["day07"]="stack"
-  ["day08"]="crud-on-stack"
-  ["day09"]="stack-questions"
-  ["day10"]="queue"
-  ["day11"]="crud-on-queue"
-  ["day12"]="queue-questions"
-  ["day13"]="trees-bst"
-  ["day14"]="crud-on-bst"
-  ["day15"]="tree-questions"
-  ["day16"]="hashmap"
-  ["day17"]="crud-on-hashmap"
-  ["day18"]="hashmap-questions"
-)
-
-declare -A TITLES=(
-  ["day01"]="Arrays — Introduction"
-  ["day02"]="CRUD Operations on Arrays"
-  ["day03"]="Array Practice Questions"
-  ["day04"]="Linked List — Introduction"
-  ["day05"]="CRUD Operations on Linked List"
-  ["day06"]="Linked List Practice Questions"
-  ["day07"]="Stack — Introduction"
-  ["day08"]="CRUD Operations on Stack"
-  ["day09"]="Stack Practice Questions"
-  ["day10"]="Queue — Introduction"
-  ["day11"]="CRUD Operations on Queue"
-  ["day12"]="Queue Practice Questions"
-  ["day13"]="Trees & BST — Introduction"
-  ["day14"]="CRUD Operations on BST"
-  ["day15"]="Tree Practice Questions"
-  ["day16"]="HashMap — Introduction"
-  ["day17"]="CRUD Operations on HashMap"
-  ["day18"]="HashMap Practice Questions"
-)
-
-declare -A DESC=(
-  ["day01"]="Understand arrays, indexing, traversal, and memory layout."
-  ["day02"]="Implement Create, Read, Update and Delete operations on arrays from scratch."
-  ["day03"]="Solve array-based problems (two-sum, reverse, rotate, etc.)."
-  ["day04"]="Understand singly and doubly linked lists, nodes and pointers."
-  ["day05"]="Implement Create, Read, Update and Delete operations on a linked list."
-  ["day06"]="Solve linked list problems (reverse, detect cycle, merge, etc.)."
-  ["day07"]="Understand the Stack data structure — LIFO, push, pop, peek."
-  ["day08"]="Implement a Stack from scratch and all its core operations."
-  ["day09"]="Solve Stack problems (balanced brackets, min stack, etc.)."
-  ["day10"]="Understand the Queue data structure — FIFO, enqueue, dequeue."
-  ["day11"]="Implement a Queue from scratch including circular queue."
-  ["day12"]="Solve Queue problems (sliding window max, task scheduler, etc.)."
-  ["day13"]="Understand Binary Trees, Binary Search Trees, and tree traversals."
-  ["day14"]="Implement BST insert, search, delete, and all traversals."
-  ["day15"]="Solve tree problems (height, LCA, level-order traversal, etc.)."
-  ["day16"]="Understand hashing, hash functions, and collision resolution."
-  ["day17"]="Implement a HashMap with put, get, remove, and resize."
-  ["day18"]="Solve HashMap problems (two-sum, group anagrams, frequency count, etc.)."
-)
-
-echo "🚀 Setting up DSA learning repo structure..."
-echo ""
-
-for day in $(echo "${!DAYS[@]}" | tr ' ' '\n' | sort); do
-  topic="${DAYS[$day]}"
-  folder="${day}-${topic}"
-  title="${TITLES[$day]}"
-  desc="${DESC[$day]}"
-
-  mkdir -p "$folder"
-
-  cat > "$folder/README.md" <<EOF
-# ${day^^} — ${title}
-
-## Goal
-${desc}
-
-## Notes
-> Write your notes, observations, and key takeaways here.
-
-## Code
-Add your implementation files in this folder alongside this README.
-
-## Resources
-- [ ] Add links to articles, videos, or documentation you found helpful.
-
-## Status
-- [ ] In progress
-- [ ] Done
-EOF
-
-  echo "✅  Created: $folder/"
-done
-
-# Create root README
-cat > README.md <<'EOF'
-# DSA Learning Journey 🧠
-
-A day-by-day study of Data Structures & Algorithms with CRUD implementations and practice questions.
-
-## Structure
-
-Each topic follows a 3-day cycle:
-
-| Day Pattern | Focus |
-|-------------|-------|
-| Day N       | Concept — theory, visuals, key ideas |
-| Day N+1     | CRUD — implement core operations from scratch |
-| Day N+2     | Questions — solve problems using that structure |
-
-## Topics Covered
-
-| Days | Topic |
-|------|-------|
-| 01–03 | Arrays |
-| 04–06 | Linked List |
-| 07–09 | Stack |
-| 10–12 | Queue |
-| 13–15 | Trees & BST |
-| 16–18 | HashMap |
-
-## Progress Tracker
-
-- [ ] Day 01 — Arrays
-- [ ] Day 02 — CRUD on Arrays
-- [ ] Day 03 — Array Questions
-- [ ] Day 04 — Linked List
-- [ ] Day 05 — CRUD on Linked List
-- [ ] Day 06 — Linked List Questions
-- [ ] Day 07 — Stack
-- [ ] Day 08 — CRUD on Stack
-- [ ] Day 09 — Stack Questions
-- [ ] Day 10 — Queue
-- [ ] Day 11 — CRUD on Queue
-- [ ] Day 12 — Queue Questions
-- [ ] Day 13 — Trees & BST
-- [ ] Day 14 — CRUD on BST
-- [ ] Day 15 — Tree Questions
-- [ ] Day 16 — HashMap
-- [ ] Day 17 — CRUD on HashMap
-- [ ] Day 18 — HashMap Questions
+**You CAN give a name to an anonymous array (then it's no longer truly anonymous):**
+```java
+int[] a = new int[]{10, 20, 30, 40};   // VALID
+```
 
 ---
 
-*Consistency > Intensity. One day at a time.*
-EOF
+### 5.9 Array Element Assignments
 
-echo ""
-echo "📁 Root README.md created."
-echo ""
-echo "✨ Done! Run the following to push to GitHub:"
-echo ""
-echo "   git add ."
-echo "   git commit -m \"chore: scaffold DSA learning folder structure\""
-echo "   git push"
-echo ""
+**Case 1 — Primitive Arrays:**  
+Allowed types = any type that can be **promoted** to the declared type.
+
+```java
+// int[] accepts: byte, short, char, int
+int[] a = new int[10];
+a[0] = 97;      // VALID (int literal)
+a[1] = 'a';     // VALID (char promoted to int)
+byte b = 10;
+a[2] = b;       // VALID (byte promoted to int)
+short s = 20;
+a[3] = s;       // VALID (short promoted to int)
+a[4] = 10l;     // INVALID (long cannot go into int)
+
+// float[] accepts: byte, short, char, int, long, float
+```
+
+**Case 2 — Object Type Arrays:**  
+Allowed: declared type objects OR its **child class** objects.
+
+```java
+Object[] a = new Object[10];
+a[0] = new Integer(10);       // VALID
+a[1] = new Object();          // VALID
+a[2] = new String("hello");   // VALID (String extends Object)
+
+Number[] n = new Number[10];
+n[0] = new Integer(10);       // VALID (Integer extends Number)
+n[1] = new Double(10.5);      // VALID (Double extends Number)
+n[2] = new String("hello");   // INVALID — String does NOT extend Number
+```
+
+**Number class hierarchy:**
+```
+Object
+  └── Number
+        ├── Integer (I)
+        ├── Byte    (B)
+        ├── Short   (S)
+        ├── Long    (L)
+        ├── Float   (F)
+        └── Double  (D)
+```
+
+**Case 3 — Interface Type Arrays:**  
+Allowed: objects of classes that **implement** the interface.
+
+```java
+Runnable[] r = new Runnable[10];
+r[0] = new Thread();           // VALID (Thread implements Runnable)
+r[1] = new String("hello");    // INVALID — String does not implement Runnable
+```
+
+**Summary Table:**
+
+| Array Type | Allowed Element Types |
+|------------|----------------------|
+| Primitive arrays | Any type promotable to declared type |
+| Object type arrays | Declared type OR child class objects |
+| Interface type arrays | Implemented class objects |
+| Abstract class arrays | Child class objects |
+
+---
+
+### 5.10 Array Variable Assignments
+
+**Case 1:** Primitive element promotions do NOT apply at array level.
+
+```java
+int[] a = {10, 20, 30};
+char[] ch = {'a', 'b', 'c'};
+
+int[] b = a;     // VALID — same type
+int[] c = ch;    // INVALID — char[] ≠ int[] at array level
+```
+
+**Promotion chart:**
+```
+char  ──────────────→ int    (VALID element promotion)
+char[] ─────────────→ int[]  (INVALID array promotion)
+int   ──────────────→ long   (VALID)
+int[] ──────────────→ long[] (INVALID)
+double ─────────────→ float  (INVALID — cannot downcast)
+String ─────────────→ Object (VALID)
+String[] ───────────→ Object[] (VALID — child array to parent array)
+```
+
+**Case 2:** When assigning arrays, only **reference** is reassigned (elements are NOT copied). Size doesn't matter, but **type must match**.
+
+```java
+int[] a = {10, 20, 30, 40, 50, 60, 70};
+int[] b = {80, 90};
+a = b;   // VALID — a now points to b's array
+b = a;   // VALID
+```
+
+**Case 3:** Dimensions must match.
+
+```java
+int[][] a = new int[3][];
+a[0] = new int[4][5];   // INVALID — 2D cannot go into slot expecting 1D
+a[0] = 10;              // INVALID — int cannot go into int[]
+a[0] = new int[4];      // VALID ✅
+```
+
+**Example — Jagged 2D reassignment:**
+```java
+int[][] a = new int[3][2];
+a[0] = new int[3];     // VALID — sizes can differ
+a[1] = new int[4];     // VALID
+a = new int[4][3];     // VALID — type and dimensions match
+```
+
+---
+
+
+---
+
+*Notes created from Durgasoft Core Java / SCJP Study Material — Chapter 1*
