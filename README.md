@@ -1,4 +1,4 @@
-#!/bin/bash
+
 
 # DSA Learning Repo - Folder Scaffold Script
 # Run this from the root of your cloned GitHub repo
