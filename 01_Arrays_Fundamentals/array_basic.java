@@ -33,7 +33,7 @@ public class array_basic {
         // Update element at index 2 
         arr3[2] = 100;
 
-        // Print array
+        // Print array   
         for (int i = 0; i < arr3.length; i++) {
             System.out.print(arr3[i] + " ");
         }
