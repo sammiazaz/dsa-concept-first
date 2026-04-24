@@ -30,7 +30,7 @@ public class array_basic {
         //3. update array ***************************************************************
         int[] arr3 = {10, 20, 30, 40, 50};
 
-        // Update element at index 2
+        // Update element at index 2 
         arr3[2] = 100;
 
         // Print array
