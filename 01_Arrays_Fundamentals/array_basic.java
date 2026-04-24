@@ -25,3 +25,14 @@ public static void main(String[] args) {
             System.out.print(arr[i] + " ");
         }
     }
+
+    //3. update array ***************************************************************
+    int[] arr3 = {10, 20, 30, 40, 50};
+
+        // Update element at index 2
+        arr[2] = 100;
+
+        // Print array
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
