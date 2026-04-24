@@ -1,4 +1,5 @@
-public static void main(String[] args) {
+public class array_basic {
+    public static void main(String[] args) {
         // Declaration
         int[] a;
         // Construction
@@ -24,15 +25,17 @@ public static void main(String[] args) {
         for (int i = 0; i <arr.length; i++){
             System.out.print(arr[i] + " ");
         }
-    }
+        System.out.println(" ");
 
-    //3. update array ***************************************************************
-    int[] arr3 = {10, 20, 30, 40, 50};
+        //3. update array ***************************************************************
+        int[] arr3 = {10, 20, 30, 40, 50};
 
         // Update element at index 2
-        arr[2] = 100;
+        arr3[2] = 100;
 
         // Print array
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i] + " ");
+        for (int i = 0; i < arr3.length; i++) {
+            System.out.print(arr3[i] + " ");
         }
+    }
+}
