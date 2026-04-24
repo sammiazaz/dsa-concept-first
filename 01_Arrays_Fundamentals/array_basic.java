@@ -35,7 +35,7 @@ public class array_basic {
 
         // Print array   
         for (int i = 0; i < arr3.length; i++) {
-            System.out.print(arr3[i] + " ");
+            System.out.print(arr3[i] + " "); 
         }
     }
 }
