@@ -19,8 +19,23 @@ public class PQ {
                 max = arr2[i];
             }
         }
-
         System.out.println("Max = " + max);
+
+        //****************question 3. Prefix Sum (Basic)********************/
+        int[] arr3 = {1, 2, 3, 4};
+        int n = arr3.length;
+
+        int[] prefix = new int[n];
+
+        prefix[0] = arr3[0];
+        System.out.print("prefix sum = ");
+        for (int i = 1; i < n; i++) {
+            prefix[i] = prefix[i - 1] + arr3[i];
+        }
+
+        for (int i = 0; i < n; i++) {
+            System.out.print(prefix[i] + " ");
+        }
     }
 
 }
