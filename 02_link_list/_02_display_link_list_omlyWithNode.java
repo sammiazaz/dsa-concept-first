@@ -8,15 +8,20 @@ class Node{
 
 public class _02_display_link_list_omlyWithNode {
     public static void display(Node head){
-        // write code here
+        //write code here
         Node temp = head;
         while(temp != null){
             System.out.print(temp.val + " ");
             temp = temp.next;
         }
-        System.out.println();
     }
+    //     for(Node temp = head; temp != null; temp = temp.next){
+    //         System.out.println(temp.val+" ");
+    //     }
+    //     System.out.println();
+    // }
 
+    
     // you dont know how many nodes in LL
     // you only access Head Node
     public static void main(String[] args) {
