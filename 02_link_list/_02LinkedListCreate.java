@@ -8,7 +8,7 @@ class Node {
     }
 }
 
-public class LinkedListCreate {
+public class _02LinkedListCreate {
 
     public static void main(String[] args) {
 

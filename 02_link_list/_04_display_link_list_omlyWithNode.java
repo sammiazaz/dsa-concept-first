@@ -6,7 +6,7 @@ class Node{
     }
 }
 
-public class _02_display_link_list_omlyWithNode {
+public class _04_display_link_list_omlyWithNode {
     public static void display(Node head){
         //write code here
         Node temp = head;
