@@ -9,7 +9,6 @@ class Node {
 }
 
 public class _02LinkedListCreate {
-
     public static void main(String[] args) {
 
         // Create nodes
