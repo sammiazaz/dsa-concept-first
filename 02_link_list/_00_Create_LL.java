@@ -3,7 +3,7 @@ class Node {
     Node next;
 }
 
-public class _01_Create_LL {
+public class _00_Create_LL {
 public static void main(String[] args) {
         // these  are nodes which contains value,
         //  but we not assign any address,
