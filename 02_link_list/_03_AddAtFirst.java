@@ -7,13 +7,11 @@ class Node {
         this.next = null;
     }
 }
-
 public class _03_AddAtFirst {
 
     // Function to add node at first
     static Node addFirst(Node head, int val) {
         Node newNode = new Node(val);
-
         newNode.next = head;
         head = newNode;
 
