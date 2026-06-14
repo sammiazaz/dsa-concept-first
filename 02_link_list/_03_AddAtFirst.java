@@ -14,7 +14,6 @@ public class _03_AddAtFirst {
         Node newNode = new Node(val);
         newNode.next = head;
         head = newNode;
-
         return head;
     }
 
